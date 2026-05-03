@@ -2,6 +2,8 @@
 const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
 const email = document.getElementById("email-address");
+const enquiryContainer = document.querySelector(".enquiry-container");
+const supportContainer = document.querySelector(".support-container");
 const generalEnquiry = document.getElementById("general-enquiry");
 const supportRequest = document.getElementById("support-request");
 const textArea = document.getElementById("message-input-field");
@@ -19,6 +21,22 @@ const consentError = document.getElementById("consent-error");
 const inputStringList = [firstName, lastName, email, textArea];
 
 const emailRegex = /\S+@\S+\.\S+/;
+
+generalEnquiry.addEventListener("focus", () => {
+    enquiryContainer.style.background = "hsl(148, 38%, 91%)";
+    enquiryContainer.style.border = "2px solid hsl(169, 82%, 27%)";
+
+    supportContainer.style.background = "white";
+    supportContainer.style.border = "1px solid black";
+});
+
+supportRequest.addEventListener("focus", () => {
+    supportContainer.style.background = "hsl(148, 38%, 91%)";
+    supportContainer.style.border = "2px solid hsl(169, 82%, 27%)";
+
+    enquiryContainer.style.background = "white";
+    enquiryContainer.style.border = "1px solid black";
+});
 
 const button = document.getElementById("submit-btn");
 button.addEventListener("click", submitHandler);
