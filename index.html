@@ -23,48 +23,48 @@
       <fieldset>
         <div class="input-section">
           <label for="first-name">First Name *</label>
-          <input id="first-name" type="text" name="first-name" required />
+          <input id="first-name" type="text" name="first-name" />
         </div>
-        <p hidden aria-hidden>This field is required</p>
+        <p id="first-name-error" class="error-message" hidden aria-hidden>This field is required</p>
 
         <div class="input-section">
           <label for="last-name">Last Name *</label>
-          <input id="last-name" type="text" name="last-name" required />
+          <input id="last-name" type="text" name="last-name" />
         </div>
-        <p hidden aria-hidden>This field is required</p>
+        <p id="last-name-error" class="error-message" hidden aria-hidden>This field is required</p>
 
         <div class="input-section">
           <label for="email-address">Email Address *</label>
-          <input id="email-address" type="email" name="email-address" required />
+          <input id="email-address" type="email" name="email-address" />
         </div>
-        <p hidden aria-hidden>Please enter a valid email address</p>
-        <p hidden aria-hidden>This field is required</p>
+        <p id="valid-email-error" class="error-message" hidden aria-hidden>Please enter a valid email address</p>
+        <p id="email-error" class="error-message" hidden aria-hidden>This field is required</p>
       </fieldset>
 
       <fieldset>
         <p>Query Type *</p>
         <div class="query-section">
-          <input id="general-enquiry" type="radio" name="query" value="General Enquiry" required />
+          <input id="general-enquiry" type="radio" name="query" value="General Enquiry" />
           <label for="general-enquiry">General Enquiry</label>
         </div>
         <div class="query-section">
-          <input id="support-request" type="radio" name="query" value="Support Request" required />
+          <input id="support-request" type="radio" name="query" value="Support Request" />
           <label for="support-request">Support Request</label>
         </div>
-        <p hidden aria-hidden>Please select a query type</p>
+        <p id="query-error" class="error-message" hidden aria-hidden>Please select a query type</p>
       </fieldset>
 
       <label for="message-input-field">Message *</label>
-      <textarea id="message-input-field" name="message" rows="12" cols="30" required></textarea>
-      <p hidden aria-hidden>This field is required</p>
+      <textarea id="message-input-field" name="message" rows="12" cols="30"></textarea>
+      <p id="textarea-error" class="error-message" hidden aria-hidden>This field is required</p>
 
       <div class="consent-container">
-        <input id="consent-checkbox" type="checkbox" name="consent" required />
+        <input id="consent-checkbox" type="checkbox" name="consent" />
         <label for="consent-checkbox">I consent to being contacted by the team *</label>
       </div>
-      <p hidden aria-hidden>To submit this form, please consent to being contacted</p>
+      <p id="consent-error" class="error-message" hidden aria-hidden>To submit this form, please consent to being contacted</p>
 
-      <button type="submit">Submit</button>
+      <button id="submit-btn" type="submit">Submit</button>
     </form>
   </main>
 

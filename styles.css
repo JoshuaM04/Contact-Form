@@ -27,6 +27,10 @@ form {
     fieldset {
         border: none;
     }
+
+    .error-message {
+        color: red
+    }
     
     input[type="text"], input[type="email"], input[type="radio"] {
         height: 50px;
