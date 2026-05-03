@@ -8,43 +8,57 @@
   
   <title>Frontend Mentor | Contact form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
 
-  Contact Us
+  <h1>Contact Us</h1>
 
-  First Name
-  This field is required
+  <fieldset>
+    <label for="first-name">First Name *</label>
+    <input id="first-name" type="text" name="first-name" />
+    <p>This field is required</p>
 
-  Last Name
-  This field is required
+    <label for="last-name">Last Name *</label>
+    <input id="last-name" type="text" name="last-name" />
+    <p>This field is required</p>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+    <label for="email-address">Email Address *</label>
+    <input id="email-address" type="email" name="email-address" />
+    <p>Please enter a valid email address</p>
+    <p>This field is required</p>
+  </fieldset>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+  <fieldset>
+    <p>Query Type</p>
+    <div>
+      <input id="general-enquiry" type="radio" name="query" value="General Enquiry" />
+      <label for="general-enquiry">General Enquiry</label>
+    </div>
+    <div>
+      <input id="support-request" type="radio" name="query" value="Support Request" />
+      <label for="support-request">Support Request</label>
+    </div>
+    <p>Please select a query type</p>
+  </fieldset>
 
-  Message
-  This field is required
+  <label for="message-input-field">Message</label>
+  <textarea id="message-input-field" name="message" rows="15" cols="30"></textarea>
+  <p>This field is required</p>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+  <input id="consent-checkbox" type="checkbox" name="consent" />
+  <label for="consent-checkbox">I consent to being contacted by the team</label>
+  <p>To submit this form, please consent to being contacted</p>
 
-  Submit
+  <button>Submit</button>
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+  <dialog>
+    Message Sent!
+    Thanks for completing the form. We'll be in touch soon!
+  </dialog>
   
-  <footer class="attribution">
+  <footer class="attribution" hidden aria-hidden>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </footer>
