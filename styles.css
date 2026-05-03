@@ -46,7 +46,7 @@ form {
         border-width: 2px;
     } 
 
-    input[type="radio"]:checked {
+    input[type="radio"]:checked, input[type="checkbox"]:checked {
         accent-color: hsl(169, 82%, 27%);
     }
 
