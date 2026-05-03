@@ -9,49 +9,64 @@
   <title>Frontend Mentor | Contact form</title>
 
   <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap" rel="stylesheet">
+
   <script defer src="script.js"></script>
 </head>
 <body>
 
-  <h1>Contact Us</h1>
+  <main>
+    <form action="">
+      <h1>Contact Us</h1>
+      <fieldset>
+        <div class="input-section">
+          <label for="first-name">First Name *</label>
+          <input id="first-name" type="text" name="first-name" required />
+        </div>
+        <p hidden aria-hidden>This field is required</p>
 
-  <fieldset>
-    <label for="first-name">First Name *</label>
-    <input id="first-name" type="text" name="first-name" />
-    <p>This field is required</p>
+        <div class="input-section">
+          <label for="last-name">Last Name *</label>
+          <input id="last-name" type="text" name="last-name" required />
+        </div>
+        <p hidden aria-hidden>This field is required</p>
 
-    <label for="last-name">Last Name *</label>
-    <input id="last-name" type="text" name="last-name" />
-    <p>This field is required</p>
+        <div class="input-section">
+          <label for="email-address">Email Address *</label>
+          <input id="email-address" type="email" name="email-address" required />
+        </div>
+        <p hidden aria-hidden>Please enter a valid email address</p>
+        <p hidden aria-hidden>This field is required</p>
+      </fieldset>
 
-    <label for="email-address">Email Address *</label>
-    <input id="email-address" type="email" name="email-address" />
-    <p>Please enter a valid email address</p>
-    <p>This field is required</p>
-  </fieldset>
+      <fieldset>
+        <p>Query Type *</p>
+        <div class="query-section">
+          <input id="general-enquiry" type="radio" name="query" value="General Enquiry" required />
+          <label for="general-enquiry">General Enquiry</label>
+        </div>
+        <div class="query-section">
+          <input id="support-request" type="radio" name="query" value="Support Request" required />
+          <label for="support-request">Support Request</label>
+        </div>
+        <p hidden aria-hidden>Please select a query type</p>
+      </fieldset>
 
-  <fieldset>
-    <p>Query Type</p>
-    <div>
-      <input id="general-enquiry" type="radio" name="query" value="General Enquiry" />
-      <label for="general-enquiry">General Enquiry</label>
-    </div>
-    <div>
-      <input id="support-request" type="radio" name="query" value="Support Request" />
-      <label for="support-request">Support Request</label>
-    </div>
-    <p>Please select a query type</p>
-  </fieldset>
+      <label for="message-input-field">Message *</label>
+      <textarea id="message-input-field" name="message" rows="12" cols="30" required></textarea>
+      <p hidden aria-hidden>This field is required</p>
 
-  <label for="message-input-field">Message</label>
-  <textarea id="message-input-field" name="message" rows="15" cols="30"></textarea>
-  <p>This field is required</p>
+      <div class="consent-container">
+        <input id="consent-checkbox" type="checkbox" name="consent" required />
+        <label for="consent-checkbox">I consent to being contacted by the team *</label>
+      </div>
+      <p hidden aria-hidden>To submit this form, please consent to being contacted</p>
 
-  <input id="consent-checkbox" type="checkbox" name="consent" />
-  <label for="consent-checkbox">I consent to being contacted by the team</label>
-  <p>To submit this form, please consent to being contacted</p>
-
-  <button>Submit</button>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
 
   <dialog>
     Message Sent!
