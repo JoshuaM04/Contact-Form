@@ -21,17 +21,18 @@
     <form action="">
       <h1>Contact Us</h1>
       <fieldset>
-        <div class="input-section">
-          <label for="first-name">First Name *</label>
-          <input id="first-name" type="text" name="first-name" />
-        </div>
-        <p id="first-name-error" class="error-message" hidden aria-hidden>This field is required</p>
-
-        <div class="input-section">
-          <label for="last-name">Last Name *</label>
-          <input id="last-name" type="text" name="last-name" />
-        </div>
-        <p id="last-name-error" class="error-message" hidden aria-hidden>This field is required</p>
+        <section class="name-layout">
+          <div class="input-section">
+            <label for="first-name">First Name *</label>
+            <input id="first-name" type="text" name="first-name" />
+            <p id="first-name-error" class="error-message" hidden aria-hidden>This field is required</p>
+          </div>
+          <div class="input-section">
+            <label for="last-name">Last Name *</label>
+            <input id="last-name" type="text" name="last-name" />
+            <p id="last-name-error" class="error-message" hidden aria-hidden>This field is required</p>
+          </div>
+        </section>
 
         <div class="input-section">
           <label for="email-address">Email Address *</label>
@@ -43,15 +44,17 @@
 
       <fieldset>
         <p>Query Type *</p>
-        <div class="query-section enquiry-container">
-          <input id="general-enquiry" type="radio" name="query" value="General Enquiry" />
-          <label for="general-enquiry">General Enquiry</label>
-        </div>
-        <div class="query-section support-container">
-          <input id="support-request" type="radio" name="query" value="Support Request" />
-          <label for="support-request">Support Request</label>
-        </div>
-        <p id="query-error" class="error-message" hidden aria-hidden>Please select a query type</p>
+        <section class="query-layout">
+          <div class="query-section enquiry-container">
+            <input id="general-enquiry" type="radio" name="query" value="General Enquiry" />
+            <label for="general-enquiry">General Enquiry</label>
+          </div>
+          <div class="query-section support-container">
+            <input id="support-request" type="radio" name="query" value="Support Request" />
+            <label for="support-request">Support Request</label>
+          </div>
+          <p id="query-error" class="error-message" hidden aria-hidden>Please select a query type</p>
+        </section>
       </fieldset>
 
       <label for="message-input-field">Message *</label>
@@ -69,8 +72,11 @@
   </main>
 
   <dialog>
-    Message Sent!
-    Thanks for completing the form. We'll be in touch soon!
+    <div class="dialog-container">
+      <img src="./assets/images/icon-success-check.svg" alt="" />
+      <p>Message Sent!</p>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
   </dialog>
   
   <footer class="attribution" hidden aria-hidden>

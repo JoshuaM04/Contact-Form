@@ -18,6 +18,8 @@ const queryError = document.getElementById("query-error");
 const messageError = document.getElementById("textarea-error");
 const consentError = document.getElementById("consent-error");
 
+const dialogBox = document.querySelector("dialog");
+
 const inputStringList = [firstName, lastName, email, textArea];
 
 const emailRegex = /\S+@\S+\.\S+/;
@@ -155,5 +157,10 @@ function submitHandler(event) {
         email.style.border = "solid 1px red";
     } else {
         email.style.border = "solid 1px black";
+    }
+
+    // Display dialog pop-up only after all conditions for the form are met
+    if (booleanStringList === true && booleanRadioCheck === true && booleanConsentCheck === true && booleanEmailValidation === true) {
+        dialogBox.classList.add("dialog-shown");
     }
 }

@@ -97,3 +97,48 @@ form {
         background-color: hsl(169, 82%, 27%);
     }
 }
+
+dialog {
+    color: rgb(172, 172, 172);
+    position: absolute;
+    top: 4rem;
+    left: 0rem;
+    right: 0rem;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: hsl(187, 24%, 22%);
+
+    .dialog-container {
+        color: white;
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.dialog-shown {
+    display: block;
+}
+
+@media (min-width: 90rem) {
+    form {
+        width: 500px;
+
+        .name-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .query-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        textarea {
+            height: 100px;
+        }
+    }
+}
