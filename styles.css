@@ -136,6 +136,12 @@ dialog {
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
         }
+        input:hover {
+            cursor: pointer;
+        }
+        button:hover {
+            cursor: pointer;
+        }
 
         textarea {
             height: 100px;
