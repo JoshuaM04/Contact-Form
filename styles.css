@@ -15,6 +15,10 @@ body {
     background-color: hsl(148, 38%, 91%);
 }
 
+h1 {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
 form {
     width: 327px;
     display: flex;
